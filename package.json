@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/xavier-monteiro/DiscordBOT#readme",
   "dependencies": {
+    "canvas": "^2.6.1",
     "discord.js": "^12.5.1",
     "fs": "0.0.1-security"
   }

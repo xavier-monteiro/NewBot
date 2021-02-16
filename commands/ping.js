@@ -6,5 +6,6 @@ module.exports =
     execute(client,message,args,Discord)
     {
         message.channel.send('pong! sola');
+   
     }
 }

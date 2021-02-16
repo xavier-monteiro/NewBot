@@ -11,3 +11,4 @@ client.events = new Discord.Collection();
 })
 
 client.login(process.env.token);
+
