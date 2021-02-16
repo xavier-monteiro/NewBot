@@ -20,5 +20,7 @@
     "canvas": "^2.6.1",
     "discord.js": "^12.5.1",
     "fs": "0.0.1-security"
+  },"engines": {
+    "node": "14.15.5"
   }
 }
