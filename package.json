@@ -1,0 +1,23 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "Second try Discord Bot",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xavier-monteiro/DiscordBOT.git"
+  },
+  "author": "Xavier Monteiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xavier-monteiro/DiscordBOT/issues"
+  },
+  "homepage": "https://github.com/xavier-monteiro/DiscordBOT#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "fs": "0.0.1-security"
+  }
+}
