@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/xavier-monteiro/DiscordBOT#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "canvas": "^2.6.1",
     "discord.js": "^12.5.1",
     "fs": "0.0.1-security"
-  },"engines": {
+  },
+  "engines": {
     "node": "14.15.5"
   }
 }
