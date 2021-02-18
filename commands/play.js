@@ -3,6 +3,8 @@ const ytpl = require('ytpl');
 const {queue} = require('../functions/Music_Handler');
 const {searcher} = require('../functions/Music_Handler');
 
+const UserPlaylist = require('../DBModels/Playlist');
+
 module.exports = 
 {
     name: 'play',
@@ -14,6 +16,21 @@ module.exports =
     const vc = message.member.voice.channel;
     if(!vc)
     return message.channel.send("Please join a voice channel first");
+
+    if(args[0]=="mypl")
+    {
+        let userData = await UserPlaylist.findOne({UserID: message.author.id});
+        if(!userData)
+        return message.reply("You dont have a playlist yet try to add songs first, use s.add");
+   
+            for(var i =0;i<userData.PlaylistSongs.length;i++)
+            {
+                let songInfo = await ytdl.getInfo(userData.PlaylistSongs[i]);
+                videoHandler(songInfo,message,vc)
+            }
+    }
+    else 
+    {
 
     let url = args.join("");
     if(url.match(/^https?:\/\/(www.youtube.com|youtube.com)\/playlist(.*)$/))
@@ -38,6 +55,7 @@ module.exports =
         let songInfo = await ytdl.getInfo(result.first.url);
         return videoHandler(songInfo,message,vc)
     }
+}
 
     async function videoHandler(songInfo, message, vc, playlist = false){
         const serverQueue = queue.get(message.guild.id);
@@ -118,6 +136,5 @@ module.exports =
                 .setColor("PURPLE")
             return message.channel.send(msg);
         }
-
     }
-}
+    }

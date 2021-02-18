@@ -41,10 +41,7 @@ const collector = msgEmbed.createReactionCollector(filter, { time:45000 });
         {
             index--;
             showEmbeds();
-        }/*else if(reaction.emoji.name=='➡️' && index==3)
-        {
-            message.channel.send("You cant");
-        }*/else if(reaction.emoji.name=='➡️')
+        }else if(reaction.emoji.name=='➡️')
         {
             index++;
             showEmbeds();
@@ -65,7 +62,6 @@ const collector = msgEmbed.createReactionCollector(filter, { time:45000 });
         .get('https://api.thecatapi.com/v1/images/search')
         .then((res)=>{
             images.push(res.data[0].url);
-            console.log(images)
         })
         .catch((err)=>{
             console.error('Err:',err)

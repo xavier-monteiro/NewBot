@@ -1,7 +1,18 @@
-module.exports = (Discord,client,message) =>{
+const guildPrefix = require('../../DBModels/GuildPrefix')
 
-    const prefix = 's.';
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
+module.exports =async (Discord,client,message) =>{
+
+    if(message.author.bot) return;
+    var prefix;
+    let data = await guildPrefix.findOne({GuildID: message.guild.id});
+    if(data)
+    {
+        prefix = data.Prefix;
+    }else 
+    {
+        prefix = 's.';
+    }
+    if(!message.content.startsWith(prefix)) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);
     const cmd = args.shift().toLowerCase();
