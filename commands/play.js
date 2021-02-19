@@ -12,7 +12,6 @@ module.exports =
     description: "play music command",
    async execute(client,message,args,Discord)
     {
-        console.log("got here")
     const vc = message.member.voice.channel;
     if(!vc)
     return message.channel.send("Please join a voice channel first");
@@ -48,7 +47,7 @@ module.exports =
     }
     else 
     {
-        let result = await searcher.search(args.join(""),{type: "video"})
+        let result = await searcher.search(args.join(" "),{type: "video"})
         if(result.first==null)
         return message.channel.send("No results found");
 
@@ -63,7 +62,9 @@ module.exports =
             title: songInfo.videoDetails.title,
             url: songInfo.videoDetails.video_url,
             vLength: songInfo.videoDetails.lengthSeconds,
-            thumbnail: songInfo.videoDetails.thumbnails[3].url
+            thumbnail: songInfo.videoDetails.thumbnails[3].url,
+            artist: songInfo.videoDetails.media.artist,
+            name: songInfo.videoDetails.media.song
         }
         if(!serverQueue){
             const queueConstructor = {
@@ -75,7 +76,7 @@ module.exports =
                 playing: true,
                 loopone: false,
                 loopall: false,
-                skipVotes: []
+                skipVotes: [],
             };
             queue.set(message.guild.id, queueConstructor);
 
@@ -132,6 +133,7 @@ module.exports =
                 .setTitle("Now Playing:")
                 .addField(serverQueue.songs[0].title, "_____")
                 .addField("Song duration: ", dur)
+                .addField("Check the song", `[${serverQueue.songs[0].name}](${serverQueue.songs[0].url})`)
                 .setThumbnail(serverQueue.songs[0].thumbnail)
                 .setColor("PURPLE")
             return message.channel.send(msg);

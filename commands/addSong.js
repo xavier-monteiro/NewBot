@@ -19,7 +19,7 @@ module.exports =
         return message.reply("We dont accept playlist, only songs");
     }
 
-        let result = await searcher.search(args.join(""),{type: "video"})
+        let result = await searcher.search(args.join(" "),{type: "video"})
         if(result.first==null)
         return message.channel.send("No results found");
 
@@ -85,7 +85,6 @@ module.exports =
                     return;
                     });
                                       
-        console.log(songInfo.videoDetails.video_url);
     }
 
     async function StoreData()
@@ -93,6 +92,11 @@ module.exports =
         try{
                         
             let newData = await UserPlaylist.findOne({UserID: message.author.id});
+
+            if(newData.PlaylistSongs.length>=20)
+            {
+                return message.reply("You already reached the max songs for your playlist");
+            }
 
             for(var i=0;i<newData.PlaylistSongs.length;i++)
             {

@@ -10,7 +10,7 @@ module.exports = (Discord,client,guild) =>{
           if (channel.type === "text") {
             if (channel.permissionsFor(client.user).has("VIEW_CHANNEL") === true) {
               if (channel.permissionsFor(client.user).has("SEND_MESSAGES") === true) {
-                channel.send(`Hello - I'm Sola! my prefix is .s , use .s help so see my commands!`);
+                channel.send(`Hello - I'm Sola! my prefix is s. , use s. help so see my commands!`);
                 
                 found = 1;
               }

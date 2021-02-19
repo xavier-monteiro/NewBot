@@ -57,13 +57,15 @@ module.exports =
         { name: 's.add [url/name]', value: 'Adds the url or trys to add the name of the song (Youtube only) to your playlist'},
         { name: 's.show', value: 'Shows your playlist'},
         { name: 's.del', value: 'Deletes your playlist'},
-        { name: 's.q', value: 'Shows the queue'},
-        { name: 's.d', value: 'Disconnects the bot of the voice channel'},
+        { name: 's.remove [number]', value: 'Removes the song at the "number" position'},
+        { name: 's.queue', value: 'Shows the queue'},
+        { name: 's.disconnect', value: 'Disconnects the bot of the voice channel'},
         { name: 's.pause', value: 'Pauses current song of the queue'},
         { name: 's.resume', value: 'Resumes the paused song of the queue'},
         { name: 's.skip', value: 'Votes to skip the current song of the queue'},
         { name: 's.fskip', value: 'Skips the current song of the queue (need to have DJ role)'},
         { name: 's.loop [one,all,off]', value: 'Loops one song/all songs of the queue, turns off loop'},
+        { name: 's.lyrics', value: 'Shows the lyrics of the current song'},
 	)
 	
 	.setFooter('Feel free to dm the owner: Katz 1(mini)#3802', owner.displayAvatarURL());

@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 
 mongoose.connect(process.env.DBURL,{ useNewUrlParser: true, useUnifiedTopology: true})
 
-
 client.commands = new Discord.Collection();
 client.events = new Discord.Collection();
 

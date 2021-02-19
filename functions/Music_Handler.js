@@ -2,7 +2,9 @@
 const {YTSearcher} = require('ytsearcher');
 
 const searcher = new YTSearcher({
-    key: process.env.youtube_api,      
+    //its a string but i have process.... because i use heroku and put the values there for safety reasons (this code is public in github)
+    key: process.env.youtube_api,
+      
     revealed: true
 });
 
