@@ -5,6 +5,7 @@ module.exports =
     name: 'phcomment',
     aliases: ['ph','phc','comment'],
     description: '',
+    cooldown: 11,
    async execute(client,message,args,Discord)
     {
         let image = message.author.displayAvatarURL();

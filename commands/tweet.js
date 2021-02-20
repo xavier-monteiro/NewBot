@@ -5,6 +5,7 @@ module.exports =
     name: 'tweet',
     aliases: ['tw'],
     description: '',
+    cooldown: 11,
    async execute(client,message,args,Discord)
     {
         let text;

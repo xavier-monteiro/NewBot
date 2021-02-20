@@ -19,7 +19,7 @@ module.exports =
 
         var InfoEmbed = new Discord.MessageEmbed()
                 .setAuthor(client.user.username, client.user.displayAvatarURL(),'')
-                .setDescription("Bot was created on: ")
+                .setDescription("Bot was created on: 28 October but was remastered in early February")
                 .addField("Uptime: ",uptime,true)
                 .addField("Support server: ","[Server](https://discord.gg/4XMUredjrG)")
                 .addField("Add me to your server: ","[Sola BOT](https://discordapp.com/oauth2/authorize?client_id=771143729649942600&scope=bot&permissions=8)")

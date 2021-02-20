@@ -3,7 +3,7 @@ const {queue} = require('../functions/Music_Handler');
 module.exports = 
 {
     name: 'disconnect',
-    aliases: ['dis','d','stop'],
+    aliases: ['dis','stop'],
     description: "resumes song",
     execute(client,message,args,Discord)
     {

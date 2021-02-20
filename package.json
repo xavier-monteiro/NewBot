@@ -24,7 +24,7 @@
     "lyrics-finder": "^21.7.0",
     "mongoose": "^5.11.17",
     "opusscript": "0.0.7",
-    "ytdl-core": "^4.4.5",
+    "ytdl-core": "^4.5.0",
     "ytpl": "^2.0.5",
     "ytsearcher": "^1.2.3"
   },

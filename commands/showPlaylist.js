@@ -8,6 +8,7 @@ module.exports =
     name: 'showPlaylist',
     aliases: ['showpl','show'],
     description: "shows user playlist",
+    cooldown: 50,
   async execute(client,message,args,Discord)
     {
         const userData = await UserPlaylist.findOne({

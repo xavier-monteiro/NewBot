@@ -5,6 +5,7 @@ module.exports =
     name: 'cats',
     aliases: ['api','apicall','cat'],
     description: "calls api",
+    cooldown: 46,
     async execute(client,message,args,Discord)
     {
        var images = [];

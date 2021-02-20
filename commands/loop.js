@@ -3,7 +3,7 @@ const {queue} = require('../functions/Music_Handler');
 module.exports = 
 {
     name: 'loop',
-    aliases: ['l'],
+    aliases: [],
     description: "loops song/queue",
     execute(client,message,args,Discord)
     {

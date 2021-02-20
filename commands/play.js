@@ -16,6 +16,9 @@ module.exports =
     if(!vc)
     return message.channel.send("Please join a voice channel first");
 
+    if(!args[0])
+    return message.channel.send("You need to say what u want to play!");
+
     if(args[0]=="mypl")
     {
         let userData = await UserPlaylist.findOne({UserID: message.author.id});
