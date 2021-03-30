@@ -15,7 +15,15 @@ module.exports =
            return console.log("There is no song playing")
        }else 
        {       
-           let fullLyrics = await lyricsFinder(serverQueue.songs[0].artist, serverQueue.songs[0].name) || "Not Found!";
+        let songName; 
+        if(!serverQueue.songs[0].name || serverQueue.songs[0].name==undefined)
+        {
+             songName = serverQueue.songs[0].title;
+        }  
+        else {
+            songName = serverQueue.songs[0].name;
+        }
+           let fullLyrics = await lyricsFinder(serverQueue.songs[0].artist, songName) || "Not Found!";
 
            if(fullLyrics=="Not Found!")
            {

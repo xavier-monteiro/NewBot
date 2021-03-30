@@ -20,7 +20,7 @@ module.exports =
 	)
 	.setImage('https://static.wikia.nocookie.net/steamtradingcards/images/b/b6/Sunrider_Academy_Artwork_4.jpg/revision/latest/scale-to-width-down/340?cb=20150423020443')
 	.setTimestamp()
-	.setFooter('Feel free to dm the owner: Katz 1(mini)#3802', owner.displayAvatarURL());
+	.setFooter('Feel free to dm the owner: Xavier Monteiro#3802', owner.displayAvatarURL());
 
         message.channel.send(helpEmbed);
         }else if (args[0]== "fun") FunCommands(); else if (args[0]== "music") MusicCommands(); else return message.channel.send("Invalid help category");
@@ -40,7 +40,7 @@ module.exports =
                 { name: 's.tweet [message]', value: 'Shows your tweet'},
             )
             
-            .setFooter('Feel free to dm the owner: Katz 1(mini)#3802', owner.displayAvatarURL());
+            .setFooter('Feel free to dm the owner: Xavier Monteiro#3802', owner.displayAvatarURL());
         
             message.channel.send(funEmbed);
         }
@@ -68,7 +68,7 @@ module.exports =
         { name: 's.lyrics', value: 'Shows the lyrics of the current song'},
 	)
 	
-	.setFooter('Feel free to dm the owner: Katz 1(mini)#3802', owner.displayAvatarURL());
+	.setFooter('Feel free to dm the owner: Xavier Monteiro#3802', owner.displayAvatarURL());
 
     message.channel.send(musicEmbed);
         }
