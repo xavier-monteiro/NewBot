@@ -20,6 +20,11 @@ module.exports =async (Discord,client,message) =>{
 
     const command = client.commands.get(cmd) || client.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
+    if(!command)
+    {
+        return console.log('dont exist');
+    }
+
     //If cooldowns map doesn't have a command.name key then create one.
     if(!cooldowns.has(command.name)){
         cooldowns.set(command.name, new Discord.Collection());
@@ -54,6 +59,6 @@ module.exports =async (Discord,client,message) =>{
             message.channel.send("Something went wrong: "+err);
         }
         
-    }
+    } 
 
 }
